@@ -19,7 +19,7 @@ jobs:
           node-version: ${{matrix.node-version}}
 
       - name: Install semantic-release npm globally
-        run: npm install -g semantic-release
+        run: nvm install 'lts/*' && npx semantic-release
         
       - name: Create new release
         id: release
